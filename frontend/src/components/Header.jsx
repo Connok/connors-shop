@@ -3,7 +3,7 @@ import { FaShoppingCart, FaUser } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <Header>
+    <header>
       <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
         <Container>
           <Navbar.Brand href="/">Proshop</Navbar.Brand>
@@ -20,7 +20,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </Header>
+    </header>
   );
 };
 
