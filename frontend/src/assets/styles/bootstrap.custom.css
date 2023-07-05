@@ -45,6 +45,7 @@
   --bs-danger-rgb: 231, 76, 60;
   --bs-light-rgb: 244, 244, 244;
   --bs-dark-rgb: 123, 138, 139;
+  --bs-navbar-rgb: 75, 0, 130;
   --bs-primary-text: #303d4a;
   --bs-secondary-text: #7b8a8b;
   --bs-success-text: #13967d;
@@ -8908,7 +8909,10 @@ fieldset:disabled .btn {
 
 .bg-dark {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(
+    var(--bs-navbar-rgb) /* Colour that effects background colour of navbar */,
+    var(--bs-bg-opacity)
+  ) !important;
 }
 
 .bg-black {
