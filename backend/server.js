@@ -4,10 +4,10 @@ dotenv.config();
 import conectDB from './config/db.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 //import products from './data/products.js';
-const port = process.env.PORT || 5000;
+
 import productRouts from './routes/productRoutes.js';
 import userRouts from './routes/userRoutes.js';
-
+const port = process.env.PORT || 5000;
 conectDB(); // conect to MongoDB
 
 const app = express();
