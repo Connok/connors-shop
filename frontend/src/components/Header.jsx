@@ -2,19 +2,26 @@ import { Badge, Navbar, Nav, Container } from "react-bootstrap";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 import { LinkContainer } from "react-router-bootstrap";
 import { useSelector } from "react-redux";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1A.png";
 
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
 
   return (
     <header>
-      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+      <Navbar
+        bg="dark"
+        variant="dark"
+        expand="lg"
+        width="50px"
+        height="50px"
+        collapseOnSelect
+      >
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>
-              <img src={logo} alt="ProShop" />
-              Proshop
+              <img src={logo} alt="ProShop" width="50px" height="50px" />
+              Connor's Shop
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
