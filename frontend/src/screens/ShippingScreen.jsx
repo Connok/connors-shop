@@ -6,14 +6,23 @@ import { useNavigate } from "react-router-dom";
 import { saveShippingAddress } from "../slices/cartSlice";
 
 const ShippingScreen = () => {
-  const [adress, setAdress] = useState("");
-  const [city, setCity] = useState("");
-  const [postalCode, setPostalCode] = useState("");
-  const [country, setCountry] = useState("");
+  const cart = useSelector((state) => state.cart);
+  const { shippingAddress } = cart;
+
+  const [adress, setAdress] = useState(shippingAddress?.adress || "");
+  const [city, setCity] = useState(shippingAddress?.city || "");
+  const [postalCode, setPostalCode] = useState(
+    shippingAddress?.postalCode || ""
+  );
+  const [country, setCountry] = useState(shippingAddress?.country || "");
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("submit");
+    dispatch(saveShippingAddress({ adress, city, postalCode, country }));
+    navigate("/payment");
   };
 
   return (
