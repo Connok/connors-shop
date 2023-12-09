@@ -11,7 +11,7 @@ import {
     deleteUser,
     getUserById,
     updateUser
-} from "../controllers/userControler.js";
+} from "../controlers/userControler.js";
 import { protect, admin } from '../middleware/authMiddleware.js';
 
 
