@@ -5,7 +5,15 @@ import Order from "../models/orderModel.js";
 // @route POST /api/orders
 // @access Private 
 const addOrderItems = asyncHandler(async (req, res) => {
-    res.send('add order items');
+    const {
+        orderItems,
+        shippingAdress,
+        paymentMethod,
+        itemPrice,
+        taxPrice,
+        shippinPrice,
+        totalPrice,
+    } = req.body
 });
 
 // @desc Get logged in user Orders
