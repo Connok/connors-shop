@@ -10,7 +10,7 @@ const ShippingScreen = () => {
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
 
-  const [adress, setAdress] = useState(shippingAddress?.adress || "");
+  const [address, setAddress] = useState(shippingAddress?.address || "");
   const [city, setCity] = useState(shippingAddress?.city || "");
   const [postalCode, setPostalCode] = useState(
     shippingAddress?.postalCode || ""
@@ -22,7 +22,7 @@ const ShippingScreen = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(saveShippingAddress({ adress, city, postalCode, country }));
+    dispatch(saveShippingAddress({ address, city, postalCode, country }));
     navigate("/payment");
   };
 
@@ -31,13 +31,13 @@ const ShippingScreen = () => {
       <CheckoutSteps step1 step2></CheckoutSteps>
       <h1>Shipping</h1>
       <Form onSubmit={submitHandler}>
-        <Form.Group controlId="adress" className="my-2">
-          <Form.Label>Adress</Form.Label>
+        <Form.Group controlId="address" className="my-2">
+          <Form.Label>Address</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter Adress"
-            value={adress}
-            onChange={(e) => setAdress(e.target.value)}
+            placeholder="Enter Address"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
           ></Form.Control>
         </Form.Group>
         <Form.Group controlId="city" className="my-2">
