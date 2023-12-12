@@ -33,6 +33,31 @@ const OrderScreen = () => {
           <ListGroup variant="flush">
             <ListGroup.Item>
               <h2>Shipping</h2>
+              <p>
+                <strong>Name: </strong> {order.user.name}
+              </p>
+              <p>
+                <strong>Email: </strong> {order.user.email}
+              </p>
+              <p>
+                <strong>Address: </strong> {order.shippingAddress.address},{" "}
+                {order.shippingAddress.city} {order.shippingAddress.postalCode},{" "}
+                {order.shippingAddress.country}
+              </p>
+              {order.isDelivered ? (
+                <Message variant="success">
+                  Delivered On {order.deliveredAt}
+                </Message>
+              ) : (
+                <Message variant="danger">Not Delivered</Message>
+              )}
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <h2>Payment Method</h2>
+              <p>
+                <strong>Method: </strong>
+                {order.paymentMethod}
+              </p>
             </ListGroup.Item>
           </ListGroup>
         </Col>
