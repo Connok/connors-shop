@@ -41,5 +41,12 @@ const createProduct = asyncHandler(async (req, res) => {
     const createProduct = await product.save();
     res.status(201).json(createProduct);
 });
+// @desc Update Product
+// @route Put /api/products/:9d
+// @access Private/Admin 
+const updateProducts = asyncHandler(async (req, res) => {
+    const products = await Product.find({});
+    res.json(products);
+});
 
 export { getProducts, getProductById, createProduct };
