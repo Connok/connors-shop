@@ -44,9 +44,9 @@ const createProduct = asyncHandler(async (req, res) => {
 // @desc Update Product
 // @route Put /api/products/:9d
 // @access Private/Admin 
-const updateProducts = asyncHandler(async (req, res) => {
-    const products = await Product.find({});
-    res.json(products);
+const updateProduct = asyncHandler(async (req, res) => {
+    const { name, price, description, image, brand, category, countInStock } = req.body;
+    const product = await Product.findById(req.params.id);
 });
 
 export { getProducts, getProductById, createProduct };
