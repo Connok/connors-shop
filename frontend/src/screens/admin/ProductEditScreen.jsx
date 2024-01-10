@@ -11,7 +11,7 @@ import {
 } from "../../slices/productsApiSlice";
 
 const ProductEditScreen = () => {
-  const { id: productID } = useParams();
+  const { id: productId } = useParams();
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
@@ -26,7 +26,7 @@ const ProductEditScreen = () => {
     isLoading,
     refetch,
     error,
-  } = useGetProductDetailsQuery(productID);
+  } = useGetProductDetailsQuery(productId);
 
   const [updateProduct, { isLoading: loadingUpdate }] =
     useUpdateProductMutation();
@@ -48,7 +48,7 @@ const ProductEditScreen = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     const updatedProduct = {
-      productID,
+      productId,
       name,
       price,
       image,
