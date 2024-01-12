@@ -35,6 +35,7 @@ const ProductListScreen = () => {
     if (window.confirm("Are you sure you want to create a new product?")) {
       try {
         await createProduct();
+        toast.success("New Product Created");
         refetch();
       } catch (err) {
         toast.error(err?.data?.message || err.error);
