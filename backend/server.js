@@ -41,7 +41,7 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
 if (process.env.NODE_ENV === 'production') {
     // set Static folder
-    app.use(express.static(path.join(__dirname, 'frontend/build')));
+    app.use(express.static(path.join(__dirname, '/frontend/build')));
 
     // any route the is not api will be redirected to index.html
     app.get('*', (req, res) =>
