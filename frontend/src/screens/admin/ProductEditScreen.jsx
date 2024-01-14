@@ -124,7 +124,7 @@ const ProductEditScreen = () => {
                 type="text"
                 placeholder="Enter Image URL"
                 value={image}
-                onChange={(e) => setImage}
+                onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
               <Form.Control
                 type="file"
