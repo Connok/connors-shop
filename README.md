@@ -19,4 +19,6 @@
 
 ## Things I Could update
 1. Update tax to include other provances
+
+## Contributing
   
