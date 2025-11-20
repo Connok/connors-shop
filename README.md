@@ -2,6 +2,8 @@
 
 [Live Demo](https://connorsshop.onrender.com/)
 
+![Connor's Shop Home Page](./screenshot.jpg)
+
 A robust e-commerce application built with the MERN stack (MongoDB, Express, React, Node.js). This platform features full user authentication, product management, and a fully integrated PayPal sandbox environment for secure transaction testing.
 
 > **Note:** The live demo is hosted on Render's free tier. Please allow 30-60 seconds for the server to spin up upon the first request.
