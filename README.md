@@ -1,24 +1,33 @@
-# Connor's Classics
+# Connor's Classics | Full Stack E-Commerce Platform
 
-## Description
-  Full Stack E-commerce Website hosted on [https://connorsshop.onrender.com/](https://connorsshop.onrender.com/) .
-  Built Using the MERN Stack.
-  The site takes a minute spin-up the server. The payment feature works and is setup in a paypal sandbox tor testing.
+[Live Demo](https://connorsshop.onrender.com/)
 
- ## Why? 
-  I built this website for the purpose of learning the MERN stack 
- ## Usage
-  ### As an admin 
-  * Update user information
-  * update, delete orders
-  * add, update and delete products
-  ### As User
-  * Create, Update and delete account information
-  * view products, add items to cart
-  * can check out with paypal, credit or debit card.
+A robust e-commerce application built with the MERN stack (MongoDB, Express, React, Node.js). This platform features full user authentication, product management, and a fully integrated PayPal sandbox environment for secure transaction testing.
 
-## Things I Could update
-1. Update tax to include other provinces
+> **Note:** The live demo is hosted on Render's free tier. Please allow 30-60 seconds for the server to spin up upon the first request.
 
-## Contributing
+## 🚀 Key Features
+
+### 🛒 Shopping & Checkout
+* **Secure Payments:** Integrated PayPal API (Sandbox) for handling credit/debit transactions.
+* **Cart Logic:** Persistent shopping cart functionality with real-time total calculation.
+* **User Profiles:** Customers can create accounts, manage shipping addresses, and view order history.
+
+### 🛠️ Admin Management
+* **Inventory Control:** Create, update, and delete products (CRUD) with image upload support.
+* **Order Tracking:** View, update, and manage status of customer orders.
+* **User Management:** Admin privileges to update user roles and data.
+
+## 💻 Tech Stack
+
+* **Frontend:** React.js, Redux (for state management), React-Bootstrap
+* **Backend:** Node.js, Express.js
+* **Database:** MongoDB, Mongoose
+* **DevOps:** Hosted on Render
+
+## 🔧 Getting Started Locally
+
+1. Clone the repository
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/connors-classics.git](https://github.com/YOUR_USERNAME/connors-classics.git)
   
