@@ -29,5 +29,26 @@ A robust e-commerce application built with the MERN stack (MongoDB, Express, Rea
 
 1. Clone the repository
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/connors-classics.git](https://github.com/YOUR_USERNAME/connors-classics.git)
-  
+   git clone [https://github.com/Connok/connors-classics.git](https://github.com/YOUR_USERNAME/connors-classics.git) 
+2. **Install dependencies (Root and Frontend)**
+   ```bash
+   npm install
+   cd frontend && npm install 
+3. **Configure Environment Variables**
+   Create a `.env` file in the root directory and add the following:
+   ```env
+   NODE_ENV = development
+   PORT = 5000
+   MONGO_URI = your_mongodb_uri
+   PAYPAL_CLIENT_ID = your_paypal_id
+4. ** Run the app
+   ``` bash
+   npm run dev
+
+## 🔮 Future Roadmap
+* Integration of Stripe for alternative payment methods.
+
+* Dynamic tax calculation API based on Canadian Provinces.
+
+* Email confirmation service (Nodemailer) for successful orders.
+
